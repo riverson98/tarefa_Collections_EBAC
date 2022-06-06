@@ -18,26 +18,25 @@ public class program {
             pessoa = new Pessoa(split[0], split[1]);
 
 
-            if (pessoa.getSexo().equalsIgnoreCase("M")){
+            if (pessoa.getSexo().equalsIgnoreCase("M") || pessoa.getSexo().equalsIgnoreCase("Masculino")) {
                 pessoasSexoMasculino.add(pessoa);
-                for (Pessoa pessoas : pessoasSexoMasculino){
+                for (Pessoa pessoas : pessoasSexoMasculino) {
                     System.out.println(pessoas);
                 }
-            }
-            else {
+            } else if (pessoa.getSexo().equalsIgnoreCase("F") || pessoa.getSexo().equalsIgnoreCase("Feminino")) {
                 pessoasSexoFeminino.add(pessoa);
-                for (Pessoa pessoas : pessoasSexoFeminino){
+                for (Pessoa pessoas : pessoasSexoFeminino) {
                     System.out.println(pessoas);
                 }
             }
             System.out.print("Gostaria de adicionar mais pessoas a lista? ");
 
-        }while (sc.next().equalsIgnoreCase("Sim"));
+        } while (sc.next().equalsIgnoreCase("Sim"));
 
         System.out.println(pessoasSexoMasculino);
         System.out.println(pessoasSexoFeminino);
         System.out.println("Obrigado");
-            sc.close();
+        sc.close();
     }
 
 }
